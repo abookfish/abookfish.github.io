@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI产品的用户体验研究方法 - 严海畅的博客</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <nav class="nav-links">
+            <a href="../index.html">首页</a>
+            <a href="../index.html#about">关于</a>
+            <a href="../index.html#work">作品</a>
+            <a href="../index.html#blog">博客</a>
+        </nav>
+    </header>
+
+    <main class="blog-post">
+        <article>
+            <h1>AI产品的用户体验研究方法：从理论到实践</h1>
+            <div class="post-meta">
+                <span><i class="far fa-calendar"></i> 2024-03-15</span>
+                <span><i class="far fa-folder"></i> 用户研究</span>
+                <span><i class="far fa-clock"></i> 12分钟阅读</span>
+            </div>
+
+            <div class="post-content">
+                <p class="intro">
+                    随着AI技术的快速发展，如何设计出真正以用户为中心的AI产品成为了一个关键问题。本文将从实践角度出发，详细介绍AI产品用户体验研究的方法论和具体案例，帮助设计师和产品经理更好地理解和应用这些方法。
+                </p>
+
+                <h2>一、AI产品用户研究的特殊性</h2>
+                <p>与传统产品相比，AI产品在用户研究方面具有以下特点：</p>
+                <ul>
+                    <li><strong>交互的不确定性：</strong>AI的响应可能因为训练数据、上下文等因素而变化</li>
+                    <li><strong>用户心智模型的差异：</strong>不同用户对AI能力的理解和期望差异较大</li>
+                    <li><strong>信任建立的复杂性：</strong>需要在透明度和效率之间找到平衡</li>
+                    <li><strong>使用场景的多样性：</strong>同一AI功能在不同场景下的表现和需求可能差异巨大</li>
+                </ul>
+
+                <h2>二、研究方法体系</h2>
+
+                <h3>1. 定性研究方法</h3>
+                <div class="case-study">
+                    <h4>深度访谈案例：AI写作助手</h4>
+                    <p>在某AI写作助手项目中，我们通过深度访谈发现：</p>
+                    <ul>
+                        <li>用户更希望AI作为"建议者"而非"决策者"</li>
+                        <li>需要清晰地展示AI的思考过程</li>
+                        <li>对AI输出的编辑权限很重要</li>
+                    </ul>
+                    <p><strong>访谈要点：</strong></p>
+                    <ul>
+                        <li>探索用户对AI的理解和期望</li>
+                        <li>了解使用场景和痛点</li>
+                        <li>收集对AI失误的容忍度</li>
+                    </ul>
+                </div>
+
+                <h3>2. 定量研究方法</h3>
+                <div class="case-study">
+                    <h4>用户行为数据分析</h4>
+                    <p>关键指标包括：</p>
+                    <ul>
+                        <li>AI建议的采纳率</li>
+                        <li>任务完成时间</li>
+                        <li>错误修正频率</li>
+                        <li>功能使用频次分布</li>
+                    </ul>
+                    <p><strong>数据收集方法：</strong></p>
+                    <pre><code>
+// 示例：用户行为跟踪代码
+trackUserBehavior({
+    event: 'ai_suggestion',
+    action: 'accept/reject',
+    context: {
+        suggestionType: 'writing_style',
+        userRole: 'content_creator',
+        timeSpent: 120
+    }
+});
+                    </code></pre>
+                </div>
+
+                <h3>3. 可用性测试的特殊考量</h3>
+                <p>在AI产品的可用性测试中，需要特别关注以下方面：</p>
+                <ul>
+                    <li>设计包含AI失误的测试场景</li>
+                    <li>观察用户处理意外情况的方式</li>
+                    <li>评估用户对AI建议的理解程度</li>
+                    <li>测试不同级别的AI自主性</li>
+                </ul>
+
+                <h2>三、实践案例分析</h2>
+
+                <div class="case-study">
+                    <h4>案例：AI客服系统改版</h4>
+                    <p><strong>研究目标：</strong>提升用户满意度和问题解决效率</p>
+                    <p><strong>研究方法：</strong></p>
+                    <ol>
+                        <li>用户访谈（20位用户）</li>
+                        <li>可用性测试（12位参与者）</li>
+                        <li>行为数据分析（3个月数据）</li>
+                    </ol>
+                    <p><strong>关键发现：</strong></p>
+                    <ul>
+                        <li>用户希望在等待人工客服时能看到排队进度</li>
+                        <li>AI回答不确定时应主动提供人工客服选项</li>
+                        <li>保留对话历史对提升用户体验很重要</li>
+                    </ul>
+                    <p><strong>改进措施：</strong></p>
+                    <ul>
+                        <li>添加实时排队进度显示</li>
+                        <li>设置AI置信度阈值，低于阈值自动转人工</li>
+                        <li>提供对话历史查询功能</li>
+                    </ul>
+                </div>
+
+                <h2>四、研究工具和方法</h2>
+
+                <div class="design-tips">
+                    <h4>1. 研究规划模板</h4>
+                    <pre><code>
+研究计划框架：
+1. 研究目标
+2. 研究问题
+3. 研究方法
+4. 参与者招募
+5. 时间安排
+6. 预期输出
+                    </code></pre>
+                </div>
+
+                <div class="design-tips">
+                    <h4>2. 访谈问题示例</h4>
+                    <ul>
+                        <li>你是如何理解AI在这个产品中的角色的？</li>
+                        <li>在使用过程中，什么时候会让你感到困惑？</li>
+                        <li>你希望AI能提供什么样的帮助？</li>
+                        <li>当AI犯错时，你通常会怎么处理？</li>
+                    </ul>
+                </div>
+
+                <h2>五、常见挑战和解决方案</h2>
+
+                <div class="next-steps">
+                    <h4>挑战1：用户期望管理</h4>
+                    <p><strong>解决方案：</strong></p>
+                    <ul>
+                        <li>清晰展示AI能力边界</li>
+                        <li>提供易于理解的错误提示</li>
+                        <li>设计渐进式的功能引导</li>
+                    </ul>
+                </div>
+
+                <div class="next-steps">
+                    <h4>挑战2：研究结果的可靠性</h4>
+                    <p><strong>解决方案：</strong></p>
+                    <ul>
+                        <li>多方法交叉验证</li>
+                        <li>长期跟踪研究</li>
+                        <li>建立标准化的评估体系</li>
+                    </ul>
+                </div>
+
+                <h2>总结与展望</h2>
+                <p>
+                    AI产品的用户体验研究需要特别关注用户与AI之间的信任建立、交互方式的设计以及期望管理。通过系统的研究方法和持续的实践改进，我们可以设计出更好的AI产品体验。随着技术的发展，研究方法也需要不断更新和适应。
+                </p>
+
+                <div class="next-steps">
+                    <h4>参考资料</h4>
+                    <ul>
+                        <li>《Designing AI Products: A UX Perspective》</li>
+                        <li>《Human-AI Interaction: Research Methods and Best Practices》</li>
+                        <li>Nielsen Norman Group: AI UX Research Guidelines</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>

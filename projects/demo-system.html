@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI助手演示系统 - 严海畅的项目</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <nav class="nav-links">
+            <a href="../index.html">首页</a>
+            <a href="../index.html#about">关于</a>
+            <a href="../index.html#work">作品</a>
+            <a href="../index.html#blog">博客</a>
+        </nav>
+    </header>
+
+    <main class="project-detail">
+        <article>
+            <h1>AI智能助手演示系统</h1>
+
+            <div class="project-overview">
+                <div class="demo-video">
+                    <video controls>
+                        <source src="../videos/ai-assistant-demo.mp4" type="video/mp4">
+                        您的浏览器不支持视频播放。
+                    </video>
+                </div>
+                <div class="project-meta">
+                    <span><i class="far fa-calendar"></i> 2024-03</span>
+                    <span><i class="far fa-code"></i> 技术栈：React + Python</span>
+                    <span><i class="far fa-clock"></i> 开发周期：12周</span>
+                </div>
+            </div>
+
+            <section class="demo-content">
+                <h2>1. 系统架构</h2>
+                <div class="architecture">
+                    <img src="../images/system-architecture.png" alt="系统架构图">
+                    <div class="arch-description">
+                        <h3>前端架构</h3>
+                        <ul>
+                            <li>React + TypeScript</li>
+                            <li>状态管理：Redux</li>
+                            <li>UI组件：Ant Design</li>
+                            <li>动画效果：Framer Motion</li>
+                        </ul>
+
+                        <h3>后端架构</h3>
+                        <ul>
+                            <li>Python + FastAPI</li>
+                            <li>数据库：PostgreSQL</li>
+                            <li>缓存：Redis</li>
+                            <li>消息队列：RabbitMQ</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2>2. 核心功能</h2>
+                <div class="core-features">
+                    <div class="feature">
+                        <h3>智能对话</h3>
+                        <img src="../images/chat-demo.gif" alt="对话演示">
+                        <ul>
+                            <li>自然语言处理</li>
+                            <li>上下文理解</li>
+                            <li>多轮对话管理</li>
+                            <li>实时响应</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature">
+                        <h3>知识管理</h3>
+                        <img src="../images/knowledge-demo.gif" alt="知识管理演示">
+                        <ul>
+                            <li>知识图谱构建</li>
+                            <li>实时学习更新</li>
+                            <li>个性化推荐</li>
+                            <li>知识溯源</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature">
+                        <h3>多模态交互</h3>
+                        <img src="../images/multimodal-demo.gif" alt="多模态交互演示">
+                        <ul>
+                            <li>语音识别</li>
+                            <li>图像理解</li>
+                            <li>手势控制</li>
+                            <li>情感识别</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2>3. 技术亮点</h2>
+                <div class="tech-highlights">
+                    <div class="highlight">
+                        <h3>实时性能优化</h3>
+                        <pre><code>
+// 流式响应实现
+const streamResponse = async (prompt) => {
+    const response = await fetch('/api/stream', {
+        method: 'POST',
+        body: JSON.stringify({ prompt }),
+        headers: { 'Content-Type': 'application/json' }
+    });
+    
+    const reader = response.body.getReader();
+    while(true) {
+        const {done, value} = await reader.read();
+        if (done) break;
+        // 处理流式数据
+        processChunk(value);
+    }
+};
+                        </code></pre>
+                    </div>
+
+                    <div class="highlight">
+                        <h3>上下文管理</h3>
+                        <pre><code>
+# 上下文管理实现
+class ContextManager:
+    def __init__(self):
+        self.context = []
+        
+    def add_context(self, message):
+        self.context.append(message)
+        if len(self.context) > MAX_CONTEXT:
+            self.context.pop(0)
+            
+    def get_relevant_context(self, query):
+        return [msg for msg in self.context 
+                if self.is_relevant(msg, query)]
+                        </code></pre>
+                    </div>
+                </div>
+
+                <h2>4. 性能指标</h2>
+                <div class="performance">
+                    <div class="metrics">
+                        <div class="metric">
+                            <span class="number">50ms</span>
+                            <span class="label">平均响应时间</span>
+                        </div>
+                        <div class="metric">
+                            <span class="number">99.9%</span>
+                            <span class="label">系统可用性</span>
+                        </div>
+                        <div class="metric">
+                            <span class="number">10k+</span>
+                            <span class="label">并发用户数</span>
+                        </div>
+                    </div>
+
+                    <div class="performance-charts">
+                        <img src="../images/performance-chart.png" alt="性能图表">
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>
